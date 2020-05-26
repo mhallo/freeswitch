@@ -3785,7 +3785,7 @@ SWITCH_DECLARE(switch_status_t) switch_rtp_add_dtls(switch_rtp_t *rtp_session, d
 
 	//SSL_CTX_set_cipher_list(dtls->ssl_ctx, "ECDH:!RC4:!SSLv3:RSA_WITH_AES_128_CBC_SHA");
 	//SSL_CTX_set_cipher_list(dtls->ssl_ctx, "ECDHE-RSA-AES256-GCM-SHA384");
-	SSL_CTX_set_cipher_list(dtls->ssl_ctx, "ALL:!ADH:!LOW:!EXP:!MD5:@STRENGTH");
+	SSL_CTX_set_cipher_list(dtls->ssl_ctx, "FIPS");
 	//SSL_CTX_set_cipher_list(dtls->ssl_ctx, "SUITEB128");
 	SSL_CTX_set_read_ahead(dtls->ssl_ctx, 1);
 #ifdef HAVE_OPENSSL_DTLS_SRTP
